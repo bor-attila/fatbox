@@ -4,7 +4,7 @@ atee's fatbox
 All vagrant box should be small as possible, but this ... this is fat.
 
 Base image: [bento/ubuntu-20.04](https://app.vagrantup.com/bento/boxes/ubuntu-20.04)  
-Final image: [atee/fatbox](https://app.vagrantup.com/atee/boxes/fatbox)
+Final image download link: [atee/fatbox](https://app.vagrantup.com/atee/boxes/fatbox)
 
 The image contains all script results.
 
@@ -51,7 +51,9 @@ Also installed: Maven 3
 
 ## Apache 2.4  
 Mounted to: _/home/vagrant/www/_  
-The apache automatically searches the `~/www/.env` and the `~/www/config/.env` file to include
+_Tip:_  
+The apache automatically searches the `~/www/.env` and the `~/www/config/.env` file to include  
+You can set the enviroment variables here like: `SetEnv VARIABLE_NAME VARIABLE_VALUE`
 
 ## Sphinx Search 3.3.1
 The searchd and the indexer not started, you must start manually.  
@@ -65,6 +67,6 @@ Start with: `mailhog`
 Docker version 19.03.13, build 4484c46d9d
 
 ## Other
-Random SSL keys generated to ./ssl directory
-gcc version 9.3.0 (Ubuntu 9.3.0-17ubuntu1~20.04)
-libboost-dev-all installed
+Random SSL keys generated to ./ssl directory  
+gcc version 9.3.0 (Ubuntu 9.3.0-17ubuntu1~20.04)  
+libboost-dev-all installed  
