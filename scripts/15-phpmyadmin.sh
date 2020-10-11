@@ -5,7 +5,7 @@ echo "Installing phpMyAdmin ..."
 wget https://files.phpmyadmin.net/phpMyAdmin/4.9.6/phpMyAdmin-4.9.6-all-languages.tar.gz -O pma.tar.gz
 tar -xf pma.tar.gz
 rm pma.tar.gz
-mv phpMyAdmin-4.9.6-all-languages phpmyadmin
+mv phpMyAdmin-4.9.6-all-languages ~/phpmyadmin
 
 cat << Config > /tmp/config.inc.php
 <?php

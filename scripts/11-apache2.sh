@@ -8,8 +8,8 @@ sudo a2enmod rewrite ssl proxy proxy_fcgi env
 sudo systemctl restart apache2
 
 #apache2 config
-sudo echo "User vagrant" > /etc/apache2/conf-available/custom.conf
-sudo echo "Group vagrant" >> /etc/apache2/conf-available/custom.conf
+sudo sh -c 'echo "User vagrant" > /etc/apache2/conf-available/custom.conf'
+sudo sh -c 'echo "Group vagrant" >> /etc/apache2/conf-available/custom.conf'
 sudo a2enconf custom
 sudo a2enconf php7.4-fpm
 sudo systemctl restart apache2
