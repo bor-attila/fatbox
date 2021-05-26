@@ -11,7 +11,7 @@ sudo systemctl restart apache2
 sudo sh -c 'echo "User vagrant" > /etc/apache2/conf-available/custom.conf'
 sudo sh -c 'echo "Group vagrant" >> /etc/apache2/conf-available/custom.conf'
 sudo a2enconf custom
-sudo a2enconf php7.4-fpm
+sudo a2enconf php8.0-fpm
 sudo systemctl restart apache2
 
 
@@ -50,8 +50,8 @@ cat << ApacheSite > /tmp/default.conf
                 SSLCertificateKeyFile /home/vagrant/.ssl/key.pem
                 
                 SetEnvIf Authorization "(.*)" HTTP_AUTHORIZATION=$1
-                IncludeOptional /home/vagrant/www/config/.env
-                IncludeOptional /home/vagrant/www/.env
+                IncludeOptional /home/vagrant/www/config/.env.apache
+                IncludeOptional /home/vagrant/www/.env.apache
 
                 <FilesMatch "\.(cgi|shtml|phtml|php)$">
                     SSLOptions +StdEnvVars

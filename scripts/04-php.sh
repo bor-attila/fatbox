@@ -2,7 +2,7 @@
 
 echo "Installing PHP ..."
 
-php_version="7.4"
+php_version="8.0"
 
 ## Add repo
 sudo add-apt-repository -y ppa:ondrej/php && \
