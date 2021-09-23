@@ -2,7 +2,7 @@
 
 echo "Installing MySQL ..."
 
-sudo apt -y install mysql-common mysql-server mysql-client libmysql++-dev
+sudo apt -y install mysql-common mysql-server mysql-client libmysql++-dev libmysqlclient-dev
 sudo sed -ri "s/bind-address\s+= 127.0.0.1/bind-address = 0.0.0.0/" /etc/mysql/mysql.conf.d/mysqld.cnf
 sudo systemctl restart mysql
 cat << InitScript > /tmp/init.sql
